@@ -12,6 +12,7 @@ import { IoCarSportOutline } from "react-icons/io5";
 import { GiIndianPalace } from "react-icons/gi";
 import { RiTaxiLine } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
+import { IoIosLogIn } from "react-icons/io";
 
 
 function Header() {
@@ -63,6 +64,8 @@ function Header() {
               Booking.com
           </Link>
 
+          <Link href='/' className='login menuOptions w-[7vw] h-[3vw] flex items-center justify-center text-white t-[3.2vw]'> Login <div className='w-[1.5vw] h-[4vw] flex justify-center items-center'> <IoIosLogIn /> </div> </Link>
+
           <div className="menuOptions flex lg:hidden">
 
 
@@ -72,23 +75,26 @@ function Header() {
 
             </div>
 
+            <Link href='/' className='loginSm menuOptions w-[13vw] h-[3.5vw] mt-[0.7vw] flex items-center justify-center text-white t-[3.2vw]'> Login <div className='w-[5vw] h-[4vw] flex justify-center items-center'> <IoIosLogIn /> </div> </Link>
+
             <button className='burger Button' onClick={()=>{setMenuOpen(true)}}>
 
               <RxHamburgerMenu />
-              <span className="sr-only">Open Main Menu</span>
+              {/* <span className="sr-only">Open Main Menu</span> */}
 
             </button>
+
 
           </div>
 
         </div>
 
-        <div className='subNav'>
+        <div className='subNav '>
 
         {subMenuItems.map((item, index)=>
           (
-            <button className='navButton Button'>
-              <Link href={item.link}> {item.icon} <p className='btnText'>{item.title}</p> </Link>
+            <button className='subButton text-[1.1vw] font-semibold rounded-[0.4vw] transition-all 0.2s ease-out hover:rounded-[0.9vw] text-white h-[5vw] m-[0.5vw] p-[0.5vw] '>
+              <Link href={item.link} className='flex-row flex justify-evenly items-center'> <div className='w-[1.5vw]'>{item.icon}</div> <p className=''>{item.title}</p> </Link>
             </button>
           )
         )}
@@ -107,7 +113,7 @@ function Header() {
             
             </div>
 
-            <ul className='menuContent w-[100%] text-[1.2vw] text-white'>
+            <ul className='menuContent w-[100%] h-[100vh] text-[1.2vw] text-white'>
 
               {subMenuItems.map((item, index)=>
                 (
