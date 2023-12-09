@@ -169,4 +169,19 @@ header
         font-size: 3vw;
     }
 
+    .navButton
+    {
+        font-size: 2vw;
+        margin: 3vw;
+        padding: 1.5vw;
+        height: 5.2vw;
+        border: none;
+        background-color: transparent;
+    }
+
+    .navButton:hover
+    {
+        scale: 1.08;
+    }
+
 }

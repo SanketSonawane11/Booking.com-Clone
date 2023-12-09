@@ -107,6 +107,18 @@ function Header() {
             
             </div>
 
+            <ul className='menuContent w-[100%] text-[1.2vw] text-white'>
+
+              {subMenuItems.map((item, index)=>
+                (
+                  <button className='navButton Button'>
+                    <Link href={item.link}> {item.icon} <p className='btnText'>{item.title}</p> </Link>
+                  </button>
+                )
+              )}
+
+            </ul>
+
         </div>}
 
     </header>
