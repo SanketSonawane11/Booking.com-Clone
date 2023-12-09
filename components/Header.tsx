@@ -11,6 +11,7 @@ import { SiYourtraveldottv } from "react-icons/si";
 import { IoCarSportOutline } from "react-icons/io5";
 import { GiIndianPalace } from "react-icons/gi";
 import { RiTaxiLine } from "react-icons/ri";
+import { IoClose } from "react-icons/io5";
 
 
 function Header() {
@@ -96,7 +97,17 @@ function Header() {
 
       </nav>
 
-      
+      {menuOpen && 
+        <div className='menu'>
+
+            <div className='menuHeader'> 
+            
+              <h3 className='w-[80%] text-center text-white font-semibold'>Menu</h3>
+              <button className='Button' onClick={()=>{setMenuOpen(false)}}><IoClose /></button>
+            
+            </div>
+
+        </div>}
 
     </header>
   )
